@@ -1,0 +1,780 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout: 35% black, 65% white */
+header, .navbar, footer {
+    background: #111 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.navbar {
+    border-bottom: 1px solid #111;
+}
+
+.logo span,
+.nav-links li a,
+#darkModeToggle,
+#signInBtn,
+#signUpBtn,
+#signOutBtn,
+.cta-btn,
+.product-card button,
+.gmail-btn,
+.close,
+.announcement,
+.featured-products,
+.hero,
+.product-card,
+.modal-content,
+input, select, textarea,
+.dropdown-content,
+.dropdown-content a,
+.modal-content button,
+.gmail-btn,
+#zoomInBtn, #zoomOutBtn {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #111 !important;
+    box-shadow: none !important;
+}
+
+/* Hover and active states: invert colors */
+.nav-links li a:hover,
+#darkModeToggle:hover,
+#signInBtn:hover,
+#signUpBtn:hover,
+#signOutBtn:hover,
+.cta-btn:hover,
+.product-card button:hover,
+.gmail-btn:hover,
+.close:hover,
+.dropdown-content a:hover,
+#zoomInBtn:hover,
+#zoomOutBtn:hover {
+    background: #111 !important;
+    color: #fff !important;
+    border-color: #111 !important;
+}
+
+.announcement,
+.product-card {
+    border-left: 4px solid #111 !important;
+    border: 1px solid #111 !important;
+}
+
+input, select, textarea {
+    background: #fff !important;
+    color: #111 !important;
+    border: 1px solid #111 !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1.5px solid #111 !important;
+}
+
+/* Modal overlay */
+.modal {
+    background: rgba(0,0,0,0.4) !important;
+}
+
+/* Dark mode: invert everything */
+body.dark-mode,
+body.dark-mode header,
+body.dark-mode .navbar,
+body.dark-mode footer,
+body.dark-mode .logo span,
+body.dark-mode .nav-links li a,
+body.dark-mode #darkModeToggle,
+body.dark-mode #signInBtn,
+body.dark-mode #signUpBtn,
+body.dark-mode #signOutBtn,
+body.dark-mode .cta-btn,
+body.dark-mode .product-card button,
+body.dark-mode .gmail-btn,
+body.dark-mode .close,
+body.dark-mode .announcement,
+body.dark-mode .featured-products,
+body.dark-mode .hero,
+body.dark-mode .product-card,
+body.dark-mode .modal-content,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .dropdown-content,
+body.dark-mode .dropdown-content a,
+body.dark-mode .modal-content button,
+body.dark-mode .gmail-btn,
+body.dark-mode #zoomInBtn,
+body.dark-mode #zoomOutBtn {
+    background: #111 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+}
+
+/* Dark mode hover: invert back to white */
+body.dark-mode .nav-links li a:hover,
+body.dark-mode #darkModeToggle:hover,
+body.dark-mode #signInBtn:hover,
+body.dark-mode #signUpBtn:hover,
+body.dark-mode #signOutBtn:hover,
+body.dark-mode .cta-btn:hover,
+body.dark-mode .product-card button:hover,
+body.dark-mode .gmail-btn:hover,
+body.dark-mode .close:hover,
+body.dark-mode .dropdown-content a:hover,
+body.dark-mode #zoomInBtn:hover,
+body.dark-mode #zoomOutBtn:hover {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #fff !important;
+}
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: #3f3e3e;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+footer {
+    background: #2b3033;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 1em 2em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.3s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.logo img {
+    height: 32px;
+    width: 32px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.logo span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s, border-bottom 0.2s;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links li a:hover {
+    color: #fffefd;
+    border-bottom: 2px solid #ffffff;
+}
+
+#darkModeToggle {
+    margin-left: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    background: linear-gradient(90deg, #222 60%, #444 100%);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#darkModeToggle:hover {
+    background: #ffffff;
+    color: #222;
+    box-shadow: 0 4px 16px rgba(46, 46, 45, 0.15);
+}
+
+.hero {
+    background: linear-gradient(120deg, #111 60%, #555454 100%), url('../assets/hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 5em 2em 4em 2em;
+    margin-bottom: 2em;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s cubic-bezier(.77,0,.18,1) both;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+    animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+}
+
+.cta-btn {
+    background: linear-gradient(90deg, #111 60%, #ffffff 100%);
+    color: #fff;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 24px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    animation: fadeInUp 1.4s cubic-bezier(.77,0,.18,1) both;
+}
+
+.cta-btn:hover {
+    background: #575757;
+    color: #222;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+/* Zoom in/out effect for Home and Shop Now buttons */
+#homeBtn,
+.cta-btn {
+    transition: transform 0.18s cubic-bezier(.77,0,.18,1), box-shadow 0.18s;
+}
+
+#homeBtn:hover,
+#homeBtn:focus,
+.cta-btn:hover,
+.cta-btn:focus {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    z-index: 1;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.featured-products {
+    padding: 2em 1em;
+    max-width: 1200px;
+    margin: 0 auto 2em auto;
+}
+
+.featured-products h3 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    letter-spacing: 1px;
+    color: #111;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.products-grid {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 1.5em;
+    text-align: center;
+    width: 240px;
+    transition: transform 0.25s cubic-bezier(.77,0,.18,1), box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+}
+
+.product-card h4 {
+    margin: 0.5em 0 0.2em 0;
+    font-size: 1.15em;
+    font-weight: 600;
+}
+
+.product-card p {
+    color: #111;
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.product-card button {
+    background: linear-gradient(90deg, #111 60%, #ffffff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.product-card button:hover {
+    background: #ffffff;
+    color: #222;
+    box-shadow: 0 4px 16px rgba(116, 115, 115, 0.15);
+}
+
+.product-card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #6e6e6c55 0%, transparent 80%);
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.product-card:hover img {
+    transform: scale(1.07) rotate(-2deg);
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+.announcement {
+    background: #fffae6;
+    color: #333;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-left: 4px solid #242322;
+    border-radius: 4px;
+    font-weight: bold;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(255,193,7,0.08);
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 8% auto;
+    padding: 2em;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    width: 90%;
+    padding: 0.7em;
+    margin: 0.7em 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+.modal-content button {
+    background: #111;
+    color: #6d6a6a;
+    border: none;
+    border-radius: 20px;
+    padding: 0.6em 1.5em;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1em;
+    transition: background 0.2s, color 0.2s;
+}
+
+.modal-content button:hover {
+    background: #52514f;
+    color: #222;
+}
+
+.gmail-btn {
+    background: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.6em 1.5em;
+    margin-bottom: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.gmail-btn:hover {
+    background: #4b4949;
+}
+
+.close {
+    position: absolute;
+    top: 0.7em;
+    right: 1em;
+    color: #888;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #222;
+}
+
+/* Posts Styles */
+.wordpress-posts {
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 2em 1.5em;
+    margin: 2em auto;
+    max-width: 900px;
+}
+.wordpress-posts h3 {
+    margin-top: 0;
+}
+.wp-post {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1em;
+}
+.wp-post:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+    .product-card {
+        width: 90%;
+        max-width: 340px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 2em 1em 2em 1em;
+    }
+    .featured-products {
+        padding: 1em 0.5em;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 0.5em;
+    }
+    .nav-links {
+        gap: 1em;
+    }
+    .logo span {
+        font-size: 1em;
+    }
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    background-color: #181818;
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .product-card,
+body.dark-mode .featured-products,
+body.dark-mode .announcement {
+    background: #222;
+    color: #f1f1f1;
+}
+
+body.dark-mode .product-card button,
+body.dark-mode .cta-btn {
+    background: #fff;
+    color: #222;
+}
+
+body.dark-mode .product-card button:hover,
+body.dark-mode .cta-btn:hover {
+    background: #4d4d4c;
+    color: #222;
+}
+
+/* 3D effect for all main buttons */
+button,
+.cta-btn,
+.product-card button,
+.gmail-btn,
+#darkModeToggle,
+#signInBtn,
+#signUpBtn,
+#signOutBtn,
+.close {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.6em 1.5em;
+    border-radius: 50px !important;
+    border: 1.5px solid #111;
+    background: #fff;
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 1.5px 0 #bbb inset;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s, border 0.18s, transform 0.18s;
+    outline: none;
+    display: inline-block;
+    position: relative;
+}
+
+button:hover,
+.cta-btn:hover,
+.product-card button:hover,
+.gmail-btn:hover,
+#darkModeToggle:hover,
+#signInBtn:hover,
+#signUpBtn:hover,
+#signOutBtn:hover,
+.close:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22), 0 1.5px 0 #222 inset;
+    transform: translateY(-2px) scale(1.07);
+}
+
+button:active,
+.cta-btn:active,
+.product-card button:active,
+.gmail-btn:active,
+#darkModeToggle:active,
+#signInBtn:active,
+#signUpBtn:active,
+#signOutBtn:active,
+.close:active {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18) inset;
+    transform: translateY(1px) scale(0.97);
+}
+
+/* Make navigation and main action buttons circular */
+#homeBtn,
+#productsBtn,
+#profileBtn,
+#darkModeToggle,
+#signInBtn,
+#signUpBtn,
+#signOutBtn,
+.cta-btn,
+.product-card button,
+.gmail-btn,
+.close {
+    border-radius: 50px !important;
+    /* ...existing button styles... */
+}
+
+/* Ensure dropdown and nav links look circular on hover/focus */
+.nav-links li a,
+.dropdown-content a {
+    border-radius: 50px !important;
+    /* ...existing code... */
+}
+
+/* 3D, circular, and animated nav buttons */
+#homeBtn,
+#productsBtn {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.6em 1.5em;
+    border-radius: 50px !important;
+    border: 2px solid #111;
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18), 0 2px 0 #bbb inset;
+    transition: 
+        background 0.22s cubic-bezier(.77,0,.18,1),
+        color 0.22s cubic-bezier(.77,0,.18,1),
+        box-shadow 0.22s cubic-bezier(.77,0,.18,1),
+        border 0.22s cubic-bezier(.77,0,.18,1),
+        transform 0.22s cubic-bezier(.77,0,.18,1);
+    outline: none;
+    display: inline-block;
+    position: relative;
+}
+
+#homeBtn:hover,
+#productsBtn:hover,
+#homeBtn:focus,
+#productsBtn:focus {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.28), 0 2px 0 #222 inset;
+    transform: translateY(-3px) scale(1.09);
+    z-index: 2;
+}
+
+#homeBtn:active,
+#productsBtn:active {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18) inset;
+    transform: translateY(1px) scale(0.96);
+}
+
+/* Add smooth transitions for nav and main action buttons */
+#homeBtn,
+#productsBtn,
+.nav-btn,
+.cta-btn,
+button,
+.product-card button,
+.gmail-btn,
+#darkModeToggle,
+#signInBtn,
+#signUpBtn,
+#signOutBtn,
+.close {
+    transition:
+        background 0.22s cubic-bezier(.77,0,.18,1),
+        color 0.22s cubic-bezier(.77,0,.18,1),
+        box-shadow 0.22s cubic-bezier(.77,0,.18,1),
+        border 0.22s cubic-bezier(.77,0,.18,1),
+        transform 0.22s cubic-bezier(.77,0,.18,1),
+        opacity 0.22s cubic-bezier(.77,0,.18,1);
+}
+
+/* Optionally, you can remove or comment out styles related to .dropdown, .dropbtn, .dropdown-content */
