@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - 7medani</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="c:\Users\mzhga\OneDrive\Pictures\Screenshots\7medani.jpg" alt="Market Logo" />
+                <span>Market</span>
+            </div>
+            <ul class="nav-links">
+                <!-- Show only Home button on products page -->
+                <li><a href="index.html" id="homeBtn" class="nav-btn">Home</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <!-- Only show Sign Out and Dark Mode on products page -->
+                <button id="signOutBtn" style="display:none;">Sign Out</button>
+                <button id="darkModeToggle">Toggle Dark Mode</button>
+            </div>
+        </nav>
+        <h1>Our Products</h1>
+    </header>
+    <main>
+        <section class="featured-products">
+            <h3>Featured Products</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="assets/shoe1.jpg" alt="Product 1">
+                    <h4>Air Max Pro</h4>
+                    <p>$120</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/shoe2.jpg" alt="Product 2">
+                    <h4>Runner X</h4>
+                    <p>$95</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/shoe3.jpg" alt="Product 3">
+                    <h4>Urban Street</h4>
+                    <p>$110</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
